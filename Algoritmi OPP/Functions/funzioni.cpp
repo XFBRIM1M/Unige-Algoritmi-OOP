@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include "funzioni.h"
+#include "../Headers/funzioni.h"
 using namespace std;
 
 void Leggi(float *vt, int d)
