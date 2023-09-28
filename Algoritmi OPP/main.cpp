@@ -1,17 +1,35 @@
-﻿#include <iostream>
-#include "Headers/funzioni.h"
-using namespace std;
+﻿#include <fstream>
+
+double PrecisioneDouble()
+{
+    double e = 1;
+    
+    while((1 + e) > 1)
+    {
+        e /= 2;
+    }
+    return(2 * e);     
+}
+float PrecisioneFloat()
+{
+    float e = 1;
+    
+    while((1 + e) > 1)
+    {
+        e /= 2;
+    }
+    return(2 * e);     
+}
+
+
 
 
 int main()
 {
-    const int dim=5;
-    float a[dim];
-    
-    cout<<"Esempio di progetto\n";
-
-    
-    Leggi(a,dim);
-    Stampa(a,dim);
-    return 0;
+    std:: ofstream output("Output.txt");
+    output << "eps float:" << " "<< PrecisioneFloat() << "\n";
+    output << "eps double:" << " "<< PrecisioneDouble() << "\n";
 }
+
+
+//
