@@ -18,16 +18,6 @@ void Stampa(float *vt, int d)
 }
 
 
-float eulerianInteger(float (*f)(float), float a, float b, int N)
-{
-    float h = (b-a) / (N-1);
-    float x, Q = 0;
-    for (int i = 0 ; i<= N-2; i++)
-    {
-        x = a + i * h;
-        Q += (*f) (x);
-    }
-}
 
 void byteDimension()
 {
